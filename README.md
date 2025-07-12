@@ -1,4 +1,4 @@
-# Toronto Shelter Occupancy Analysis
+# Toronto Shelter Occupancy Analysis (https://open.toronto.ca/dataset/daily-shelter-occupancy/)
 Exploratory Analysis of Toronto Shelter Data from 2022 to 2024 Using Pandas and Matplotlib
 # Data set description
 Data set description: a combined data set of shelter overnight occupancy data from 2022 to 2024, with 48,794 rows and 32 attributes. Key attributes are occuapancy date, shelter entities in a hierarchical order of organization, group, location, and program, and shelter capacity funding rooms and beds (i.e. rooms and beds that have secured funding), shelter unavailable rooms and beds (i.e. rooms and beds that are funded but not available for use for certain reasons on occupancy dates), and shelter occupancy rates.
