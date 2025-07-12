@@ -1,2 +1,12 @@
-# TorontoShelter
-Exploratory Analysis of Toronto Shelter Data Using Pandas and Matplotlib
+# Toronto Shelter Occupancy Analysis
+Exploratory Analysis of Toronto Shelter Data from 2022 to 2024 Using Pandas and Matplotlib
+# Data set description
+Data set description: a combined data set of shelter overnight occupancy data from 2022 to 2024, with 48,794 rows and 32 attributes. Key attributes are occuapancy date, shelter entities in a hierarchical order of organization, group, location, and program, and shelter capacity funding rooms and beds (i.e. rooms and beds that have secured funding), shelter unavailable rooms and beds (i.e. rooms and beds that are funded but not available for use for certain reasons on occupancy dates), and shelter occupancy rates.
+# Key learning and challenges
+Learning: understanding the data set grains is key. Occupancy date is the finest grain along time dimension, whereas program ID is the finest grain along the shelter entity dimension. In another word, each row of the table is a number of shelter data points attributable to a unique program ID and a date. This understanding determines how to aggregate data to drive the right insights. For example, in order to calculate the average of overall shelter capacity from 2022 to 2024, the analysis first groups by program ID, then aggregates ove a year and then averages over the 3-year period. The other learning is the data consistency. Funded rooms and beds are used to gauge the shelter capacity. However, this key attribute doesn't have consistent values. For example, it is observed that one program can have different values of funded rooms or beds over the course of a year. The city website doesn't provide proper explanations about how data for funded rooms and beds are collected and how data quality is ensured.
+Challenges: data quality and lack of program information are the main challenges. It is particularly challenging to decide the hierarchical structure of the shelters. Missing data is another issue. For example, the number of unique shelter (group) IDs doesn't match the number of shelter group names which also have missing values. Occupancy date changes its format from 2022 to 2024, creating an initial error when appending the data sets together.
+# Key insights:
+1) Toronto has on average about 8500 beds and rooms shelter capacity from 2022 to 2024
+2) Toronto shelters were high in demand, sustaining near full-capacity occupancy rates above 96% from 2022 to 2024
+3) Based on daily user counts, shelter-seeking population grew to an all-time high of about 10,000
+4) A call to action focuses on improving shelter maintenance. About 2.5% - 10% of beds and rooms were funded but not available for use due to maintenance or other related reasons. Improving funding and efficiency to make funded shelters fully usable can immediately provide more relief to people in stress
